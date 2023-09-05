@@ -14,6 +14,21 @@ describe("Contador de palabras", () => {
     const texto = "El password de mi cuenta es PASSWORD. Es un password de poco cuidado.";
     const ListaEsperada = ["El", "password", "de", "mi", "cuenta", "es", "PASSWORD.", "Es", "un", "password", "de", "poco", "cuidado."];
     const ListaObtenida = contador.obtenerListaPalabras(texto);
-    expect(ListaEsperada).toEqual(ListaObtenida);
+    expect(ListaObtenida).toEqual(ListaEsperada);
   });
+
+  it("Deberia mostrar una lista de las palabras sin simbolos que hay en el texto", () => {
+    const texto = "El password de mi cuenta es PASSWORD. Es un password de poco cuidado.";
+    const ListaEsperada = ["El", "password", "de", "mi", "cuenta", "es", "PASSWORD", "Es", "un", "password", "de", "poco", "cuidado"];
+    const ListaObtenida = contador.obtenerListaPalabrasSinSimbolos(texto);
+    expect(ListaObtenida).toEqual(ListaEsperada);
+  });
+
+  it("Deberia mostrar una lista de las palabras sin simbolos que hay en el texto", () => {
+    const texto = "El password de mi cuenta es PASSWORD. Es un password de poco cuidado.";
+    const ListaEsperada = ["El", "password", "de", "mi", "cuenta", "es", "PASSWORD", "Es", "un", "password", "de", "poco", "cuidado"];
+    const ListaObtenida = contador.obtenerListaPalabrasSinSimbolos(texto);
+    expect(ListaObtenida).toEqual(ListaEsperada);
+  });
+
 });
