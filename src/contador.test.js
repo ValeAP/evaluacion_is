@@ -10,4 +10,10 @@ describe("Contador de palabras", () => {
   });
 
 
+  it("Deberia mostrar una lista de las palabras que hay en el texto", () => {
+    const texto = "El password de mi cuenta es PASSWORD. Es un password de poco cuidado.";
+    const ListaEsperada = ["El", "password", "de", "mi", "cuenta", "es", "PASSWORD.", "Es", "un", "password", "de", "poco", "cuidado."];
+    const ListaObtenida = contador.obtenerListaPalabras(texto);
+    expect(ListaEsperada).toEqual(ListaObtenida);
+  });
 });

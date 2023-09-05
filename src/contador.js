@@ -4,6 +4,9 @@ class Contador {
     return texto;
   }
 
+  obtenerListaPalabras(texto){
+    return texto.split(" ");
+  }
 }
 
 export default Contador;
