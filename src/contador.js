@@ -17,6 +17,16 @@ class Contador {
     }
     return lista;
   }
+
+  obtenerListaPalabrasLimpia(texto){
+    const lista = this.obtenerListaPalabrasSinSimbolos(texto);
+    for (let i=0; i<lista.length; i++){
+      
+      lista[i] = lista[i].toUpperCase();
+  
+    }
+    return lista;
+  }
 }
 
 export default Contador;

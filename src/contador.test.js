@@ -31,4 +31,11 @@ describe("Contador de palabras", () => {
     expect(ListaObtenida).toEqual(ListaEsperada);
   });
 
+  it("Deberia mostrar una lista de las palabras sin simbolos y en mayusculas que hay en el texto", () => {
+    const texto = "El password cuidado.";
+    const ListaEsperada = ["EL", "PASSWORD", "CUIDADO"];
+    const ListaObtenida = contador.obtenerListaPalabrasLimpia(texto);
+    expect(ListaObtenida).toEqual(ListaEsperada);
+  });
+
 });
